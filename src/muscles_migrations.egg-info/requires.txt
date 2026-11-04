@@ -1,0 +1,7 @@
+muscles-data<1.0.0,>=0.2.0
+
+[mongodb]
+muscles-data-mongodb<1.0.0,>=0.2.0
+
+[redis]
+muscles-data-redis<1.0.0,>=0.2.0

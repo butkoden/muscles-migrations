@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "muscles-migrations"
+version = "0.2.1"
+description = "Storage-independent migration orchestration for Muscles"
+requires-python = ">=3.10"
+dependencies = ["muscles-data>=0.2.0,<1.0.0"]
+
+[project.optional-dependencies]
+redis = ["muscles-data-redis>=0.2.0,<1.0.0"]
+mongodb = ["muscles-data-mongodb>=0.2.0,<1.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/butkoden/muscles-migrations"
+Repository = "https://github.com/butkoden/muscles-migrations"
+Documentation = "https://github.com/butkoden/muscles-migrations#readme"
+Releases = "https://github.com/butkoden/muscles-migrations/releases"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["muscles.migrations*"]
